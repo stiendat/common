@@ -51,3 +51,22 @@ def getGameModeForPrinting(gameMode):
 		return "CatchTheBeat"
 	else:
 		return "osu!mania"
+
+def getGameModeForMatchAPI(gameModeString):
+	"""
+	Convert a game mode string to number for multiplayer api
+
+	:param gameMode: game mode string
+	:return: game mode number
+	"""
+
+	if gameModeString == 'std':
+		return 0
+	elif gameModeString == 'taiko':
+		return 1
+	elif gameModeString == 'ctb':
+		return 2
+	elif gameModeString == 'mania':
+		return 3
+	else:
+		return None
